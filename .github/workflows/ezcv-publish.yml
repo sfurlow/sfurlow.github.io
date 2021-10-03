@@ -20,7 +20,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install --upgrade setuptools wheel
-        python -m pip install ezcv
+
+    - name: Install custom ezcv
+      uses: actions/checkout@v2
+      with:
+          reposity: sfurlow/ezcv
+          ref: skill_fix
+      run: |
+        python -m pip install --upgrade .
 
     - name: build html files
       run: |
