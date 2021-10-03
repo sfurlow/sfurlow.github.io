@@ -1,1 +1,1 @@
-ezcv
+git+https://github.com/sfurlow/ezcv@skill_fix
