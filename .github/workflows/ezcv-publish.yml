@@ -22,7 +22,6 @@ jobs:
         python -m pip install --upgrade setuptools wheel
 
     - name: Install custom ezcv
-      uses: actions/checkout@v2
       with:
           reposity: sfurlow/ezcv
           ref: skill_fix
