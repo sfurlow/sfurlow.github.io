@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato',sans-serif;
+  color: #333;
+  line-height: 1.6;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li {
+  list-style-position: inside;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h1,h2 {
+  line-height: 1.2;
+}
+
+section {
+  margin-top: 30px;
+}
+
+section h1 {
+  border-bottom: 1px solid #000;
+}
+
+p {
+  margin-top: 30px;
+}
+
+/* UTILITIES */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: top;
+  height: 100%;
+}
+
+.span-2 {
+  grid-row: 1 / span 2;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-primary a {
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  height: 150px;
+  width: 100%;
+}
+
+.header .flex {
+  justify-content: space-between;
+}
+
+.header ul {
+  list-style-type: none;
+}
+
+.header a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.navlinks {
+  justify-content: space-between;
+}
+
+.navlinks li {
+  padding: 10px;
+  margin: 0 5px;
+}
+
+/* Hacky workaround */
+/* SKILLS */
+.last {
+  margin-top: -100px;
+}
+
+.skill-category {
+  padding-top: 10px;
+}
+
+.skills-grid-container {
+  margin-top: 30px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 10px;
+  padding: 10px;
+}
+.footer-copyright {
+  justify-content: space-around;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  padding: 15px;
+}
+
+.copyright p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile */
+@media(max-width: 546px) {
+  .header {
+    height: auto;
+  }
+
+  .header .flex {
+    flex-direction: column;
+  }
+
+  .header .flex nav {
+    margin-top: 20px;
+  }
+
+  .navlinks li {
+    padding: 5px;
+  }
+
+  .navbar ul {
+    padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .last {
+    margin: 0;
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .footer .flex {
+    flex-direction: column;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
